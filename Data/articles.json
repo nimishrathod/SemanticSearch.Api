@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "title": "Introduction to Microservices",
+    "content": "Microservices architecture breaks down applications into small, independent services. Each service handles a specific business capability and can be deployed independently.",
+    "category": "Architecture",
+    "date": "2024-01-15",
+    "url": "/articles/microservices-intro"
+  },
+  {
+    "id": "2",
+    "title": "Database Query Optimization",
+    "content": "Improving database performance involves creating proper indexes, optimizing query plans, and understanding execution statistics. Index tuning is crucial for fast queries.",
+    "category": "Database",
+    "date": "2024-02-20",
+    "url": "/articles/query-optimization"
+  },
+  {
+    "id": "3",
+    "title": "Modular Monolith Pattern",
+    "content": "A modular monolith organizes code into independent modules within a single deployment unit. It provides better structure than traditional monoliths while avoiding microservices complexity.",
+    "category": "Architecture",
+    "date": "2024-03-10",
+    "url": "/articles/modular-monolith"
+  },
+  {
+    "id": "4",
+    "title": "CQRS and Event Sourcing",
+    "content": "Command Query Responsibility Segregation separates read and write operations. Event sourcing stores state changes as events, enabling time travel and audit trails.",
+    "category": "Architecture",
+    "date": "2024-04-05",
+    "url": "/articles/cqrs-event-sourcing"
+  },
+  {
+    "id": "5",
+    "title": "SQL Performance Troubleshooting",
+    "content": "When databases slow down, check for missing indexes, examine execution plans, analyze wait statistics, and review query patterns. Proper monitoring prevents performance issues.",
+    "category": "Database",
+    "date": "2024-05-12",
+    "url": "/articles/sql-performance"
+  }
+]

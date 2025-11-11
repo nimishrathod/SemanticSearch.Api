@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.semantickernel" Version="1.67.1" />
+    <PackageReference Include="microsoft.semantickernel.connectors.qdrant" Version="1.67.1-preview" />
+  </ItemGroup>
+
+</Project>
