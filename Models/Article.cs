@@ -13,6 +13,6 @@ public record SearchResult(
     string Title,
     string Url,
     string Category,
-    string Score,
+    double? Score,
     string Snippet
 );

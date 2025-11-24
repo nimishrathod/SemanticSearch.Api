@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="microsoft.semantickernel" Version="1.67.1" />
+    <PackageReference Include="Microsoft.SemanticKernel.Connectors.OpenAI" Version="1.67.1" />
     <PackageReference Include="microsoft.semantickernel.connectors.qdrant" Version="1.67.1-preview" />
   </ItemGroup>
 
