@@ -14,7 +14,7 @@ public class VectorStoreService(QdrantClient qdrantClient, EmbeddingService embe
 
     public async Task IndexArticlesAsync(List<Article> articles)
     {
-        var collection = _vectorStore.GetCollection<string, ArticleRecord>(CollectionName);
+        var collection = _vectorStore.GetCollection<Guid, ArticleRecord>(CollectionName);
 
         await collection.EnsureCollectionExistsAsync();
 
@@ -24,7 +24,7 @@ public class VectorStoreService(QdrantClient qdrantClient, EmbeddingService embe
 
             var record = new ArticleRecord
             {
-                Key = article.Id,
+                Key = Guid.Parse(article.Id),
                 Title = article.Title,
                 Content = article.Content,
                 Category = article.Category,
@@ -41,7 +41,7 @@ public class VectorStoreService(QdrantClient qdrantClient, EmbeddingService embe
 
     public async Task<List<SearchResult>> SearchAsync(string query, int topK = 5)
     {
-        var collection = _vectorStore.GetCollection<string, ArticleRecord>(CollectionName);
+        var collection = _vectorStore.GetCollection<Guid, ArticleRecord>(CollectionName);
         var queryEmbedding = await _embeddingService.GenerateEmbeddingAsync(query);
 
         var results = new List<SearchResult>();
@@ -64,7 +64,7 @@ public class VectorStoreService(QdrantClient qdrantClient, EmbeddingService embe
 public class ArticleRecord
 {
     [VectorStoreKey]
-    public string Key { get; set; } = string.Empty;
+    public Guid Key { get; set; }
     [VectorStoreData]
     public string Title { get; set; } = string.Empty;
     [VectorStoreData]
