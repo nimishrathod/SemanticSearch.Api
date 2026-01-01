@@ -4,24 +4,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Embeddings;
-using Qdrant.Client;
 using SemanticSearch.Api.Models;
 using SemanticSearch.Api.Services;
 
 
 var builder = Host.CreateApplicationBuilder(args);
-
-// Configure Semantic Kernel with Huggingface
-builder.Services.AddSingleton(sp =>
-{
-    var kernel = Kernel.CreateBuilder()
-                .AddHuggingFaceEmbeddingGenerator("sentence-transformers/all-MiniLM-L6-v2")
-                .Build();
-    return kernel;
-});
-
-// Configure Qdrant client
-builder.Services.AddSingleton(sp => new QdrantClient("localhost", 6333));
 
 // Register Services
 builder.Services.AddSingleton<EmbeddingService>();

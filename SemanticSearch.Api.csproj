@@ -15,4 +15,10 @@
     <PackageReference Include="microsoft.semantickernel.connectors.qdrant" Version="1.67.1-preview" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Data/articles.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
